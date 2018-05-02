@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MVPVogellaTutorial</string>
+    <string name="empty_data_error">Empty data error</string>
+</resources>
