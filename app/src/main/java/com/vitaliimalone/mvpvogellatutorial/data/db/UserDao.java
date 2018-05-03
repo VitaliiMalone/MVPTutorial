@@ -1,4 +1,4 @@
-package com.vitaliimalone.mvpvogellatutorial.db;
+package com.vitaliimalone.mvpvogellatutorial.data.db;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
@@ -10,7 +10,7 @@ import java.util.List;
 @Dao
 public interface UserDao {
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(User user);
 
     @Query("SELECT * FROM user")

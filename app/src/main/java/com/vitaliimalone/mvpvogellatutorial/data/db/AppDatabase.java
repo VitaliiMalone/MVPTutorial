@@ -1,4 +1,4 @@
-package com.vitaliimalone.mvpvogellatutorial.db;
+package com.vitaliimalone.mvpvogellatutorial.data.db;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;

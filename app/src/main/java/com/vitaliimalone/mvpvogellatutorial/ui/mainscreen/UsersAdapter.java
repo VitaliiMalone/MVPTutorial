@@ -1,4 +1,4 @@
-package com.vitaliimalone.mvpvogellatutorial;
+package com.vitaliimalone.mvpvogellatutorial.ui.mainscreen;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.vitaliimalone.mvpvogellatutorial.db.User;
+import com.vitaliimalone.mvpvogellatutorial.R;
+import com.vitaliimalone.mvpvogellatutorial.data.db.User;
 
 import java.util.List;
 
@@ -16,7 +17,16 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
     private List<User> users;
 
     public UsersAdapter(List<User> users) {
+        setList(users);
+    }
+
+    private void setList(List<User> users) {
         this.users = users;
+    }
+
+    public void replaceData(List<User> users) {
+        setList(users);
+        notifyDataSetChanged();
     }
 
     @NonNull
