@@ -1,7 +1,5 @@
 package com.vitaliimalone.mvpvogellatutorial;
 
-import android.text.TextUtils;
-
 import com.vitaliimalone.mvpvogellatutorial.db.User;
 
 public class UsersPresenter {
@@ -33,6 +31,7 @@ public class UsersPresenter {
         User user = view.getUserData();
         if (user.getName().isEmpty() || user.getEmail().isEmpty()) {
             view.showToast(R.string.empty_data_error);
+            return;
         }
         view.showProgress();
         model.addUser(user);
